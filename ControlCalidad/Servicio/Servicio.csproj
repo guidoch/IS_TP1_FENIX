@@ -45,6 +45,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entidades\AutenticarDTO.cs" />
+    <Compile Include="Entidades\ColorDTO.cs" />
+    <Compile Include="Entidades\LineaTrabajoDTO.cs" />
+    <Compile Include="Entidades\ModeloDTO.cs" />
+    <Compile Include="Entidades\OPDTO.cs" />
     <Compile Include="IServicio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Servicio.cs" />

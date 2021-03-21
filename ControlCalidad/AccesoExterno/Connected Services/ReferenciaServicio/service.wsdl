@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Servicio" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Servicio.Entidades" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicio_Autenticar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Autenticar" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_Autenticar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AutenticarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_CerrarSesion_InputMessage">
+    <wsdl:part name="parameters" element="tns:CerrarSesion" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_CerrarSesion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CerrarSesionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_ListarOPs_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarOPs" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_ListarOPs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarOPsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_ReanudarOP_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReanudarOP" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_ReanudarOP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReanudarOPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_FinalizarOP_InputMessage">
+    <wsdl:part name="parameters" element="tns:FinalizarOP" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_FinalizarOP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FinalizarOPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_PausarOP_InputMessage">
+    <wsdl:part name="parameters" element="tns:PausarOP" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_PausarOP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PausarOPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_GetModelos_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetModelos" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_GetModelos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetModelosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_GetColores_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetColores" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_GetColores_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetColoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_GetLineasLibres_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLineasLibres" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_GetLineasLibres_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLineasLibresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_ControlarOPsTodasFinalizadas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ControlarOPsTodasFinalizadas" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_ControlarOPsTodasFinalizadas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ControlarOPsTodasFinalizadasResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServicio">
+    <wsdl:operation name="Autenticar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicio/Autenticar" message="tns:IServicio_Autenticar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicio/AutenticarResponse" message="tns:IServicio_Autenticar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CerrarSesion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicio/CerrarSesion" message="tns:IServicio_CerrarSesion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicio/CerrarSesionResponse" message="tns:IServicio_CerrarSesion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarOPs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicio/ListarOPs" message="tns:IServicio_ListarOPs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicio/ListarOPsResponse" message="tns:IServicio_ListarOPs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReanudarOP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicio/ReanudarOP" message="tns:IServicio_ReanudarOP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicio/ReanudarOPResponse" message="tns:IServicio_ReanudarOP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FinalizarOP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicio/FinalizarOP" message="tns:IServicio_FinalizarOP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicio/FinalizarOPResponse" message="tns:IServicio_FinalizarOP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PausarOP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicio/PausarOP" message="tns:IServicio_PausarOP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicio/PausarOPResponse" message="tns:IServicio_PausarOP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModelos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicio/GetModelos" message="tns:IServicio_GetModelos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicio/GetModelosResponse" message="tns:IServicio_GetModelos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetColores">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicio/GetColores" message="tns:IServicio_GetColores_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicio/GetColoresResponse" message="tns:IServicio_GetColores_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLineasLibres">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicio/GetLineasLibres" message="tns:IServicio_GetLineasLibres_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicio/GetLineasLibresResponse" message="tns:IServicio_GetLineasLibres_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ControlarOPsTodasFinalizadas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicio/ControlarOPsTodasFinalizadas" message="tns:IServicio_ControlarOPsTodasFinalizadas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicio/ControlarOPsTodasFinalizadasResponse" message="tns:IServicio_ControlarOPsTodasFinalizadas_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServicio" type="tns:IServicio">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Autenticar">
+      <soap:operation soapAction="http://tempuri.org/IServicio/Autenticar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CerrarSesion">
+      <soap:operation soapAction="http://tempuri.org/IServicio/CerrarSesion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarOPs">
+      <soap:operation soapAction="http://tempuri.org/IServicio/ListarOPs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReanudarOP">
+      <soap:operation soapAction="http://tempuri.org/IServicio/ReanudarOP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinalizarOP">
+      <soap:operation soapAction="http://tempuri.org/IServicio/FinalizarOP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PausarOP">
+      <soap:operation soapAction="http://tempuri.org/IServicio/PausarOP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModelos">
+      <soap:operation soapAction="http://tempuri.org/IServicio/GetModelos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetColores">
+      <soap:operation soapAction="http://tempuri.org/IServicio/GetColores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLineasLibres">
+      <soap:operation soapAction="http://tempuri.org/IServicio/GetLineasLibres" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ControlarOPsTodasFinalizadas">
+      <soap:operation soapAction="http://tempuri.org/IServicio/ControlarOPsTodasFinalizadas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Servicio">
+    <wsdl:port name="BasicHttpBinding_IServicio" binding="tns:BasicHttpBinding_IServicio">
+      <soap:address location="http://localhost:8733/Servicio/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

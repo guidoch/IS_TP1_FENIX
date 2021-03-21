@@ -61,12 +61,12 @@ namespace Datos
         {
             return _ops.Find(item => item.Numero == codigo);
         }
-        public List<OP> BuscarSupervisorLinea(Empleado supervisor)
+        public List<OP> BuscarSupervisorLinea(int supervisor)
         {
             var listaOP = new List<OP>();
             foreach (var op in _ops)
             {
-                if (op.Supervisor.Codigo.Equals(supervisor.Codigo)) listaOP.Add(op);
+                if (op.Supervisor.Codigo.Equals(supervisor)) listaOP.Add(op);
             }
             return listaOP;
         }
@@ -83,11 +83,11 @@ namespace Datos
             return true;
         }
 
-        public bool TodasFinalizadas(Empleado supervisor)
+        public bool TodasFinalizadas(int supervisor)
         {
             foreach (var op in _ops)
             {
-                if (op.Supervisor.Equals(supervisor) && !op.Estado.Equals(Estado.FINALIZADA))
+                if (op.Supervisor.Codigo.Equals(supervisor) && !op.Estado.Equals(Estado.FINALIZADA))
                 {
                     return false;
                 }

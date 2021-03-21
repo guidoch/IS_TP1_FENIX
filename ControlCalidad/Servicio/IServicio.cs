@@ -13,6 +13,24 @@ namespace Servicio
     public interface IServicio
     {
         [OperationContract]
-        AutenticarDTO Autenticar(string user, string pass);    
+        AutenticarDTO Autenticar(string user, string pass);
+        [OperationContract]
+        bool CerrarSesion(int sesion);
+        [OperationContract]
+        List<OPDTO> ListarOPs(int empleado);
+        [OperationContract]
+        bool ReanudarOP(int numero);
+        [OperationContract]
+        bool FinalizarOP(int numero);
+        [OperationContract]
+        bool PausarOP(int numero);
+        [OperationContract]
+        List<ModeloDTO> GetModelos();
+        [OperationContract]
+        List<ColorDTO> GetColores();
+        [OperationContract]
+        List<LineaTrabajoDTO> GetLineasLibres();
+        [OperationContract]
+        bool ControlarOPsTodasFinalizadas(int empleado);
     }
 }

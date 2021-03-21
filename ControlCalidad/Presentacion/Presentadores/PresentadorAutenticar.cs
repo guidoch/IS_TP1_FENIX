@@ -1,9 +1,12 @@
-﻿using Presentacion.Vistas;
+﻿using AccesoExterno;
+using AccesoExterno.ReferenciaServicio;
+using Presentacion.Vistas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Presentacion.Presentadores
 {
@@ -18,8 +21,8 @@ namespace Presentacion.Presentadores
 
         public void Login(string user, string pass)
         {
-            throw new NotImplementedException();
-            /*LoginDTO login = ControlCalidadClienteAccesoExterno.Adaptador.Login(user, pass);
+            //throw new NotImplementedException();
+            AutenticarDTO login = Adaptador.Autenticar(user, pass);
             switch (login.Estado)
             {
                 case 0:
@@ -38,7 +41,7 @@ namespace Presentacion.Presentadores
                 default:
                     MessageBox.Show("Como llegue aqui?", "ERROR");
                     break;
-            }*/
+            }
         }
     }
 }

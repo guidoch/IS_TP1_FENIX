@@ -18,6 +18,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Host", "Host\Host.csproj", "{96E0C462-3F71-4228-83D5-53FD13BE48C5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccesoExterno", "AccesoExterno\AccesoExterno.csproj", "{A00E506D-F453-4927-B38E-5A93E9F67772}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B29E037F-EE9D-4C8E-BCEA-6C54CFE725B3} = {B29E037F-EE9D-4C8E-BCEA-6C54CFE725B3}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentacion", "Presentacion\Presentacion.csproj", "{F58BCC01-B287-46CD-B114-0CC9CA90B092}"
 EndProject
