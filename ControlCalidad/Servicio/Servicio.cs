@@ -137,5 +137,35 @@ namespace Servicio
         {
             return GestorListaOPSupLinea.ControlarTodasFinalizadas(empleado);
         }
+
+        public bool IniciarOP(int numero, int linea, int modelo, int color, int empleado)
+        {
+            return GestorIniciarOP.IniciarOP(numero, linea, modelo, color, empleado);
+        }
+
+        public List<OPDTO> ListaOPs()
+        {
+            var aux = GestorListaOPSupCalidad.ListaOPs();
+            var ops = new List<OPDTO>();
+            foreach (var op in aux)
+            {
+                ops.Add(new OPDTO()
+                {
+                    Numero = op.Numero,
+                    Modelo = op.Modelo.SKU,
+                    Color = op.Color.Codigo,
+                    Hermanado = op.Hermanado,
+                    Estado = op.Estado.ToString(),
+                    Linea = op.Linea.Numero,
+                    Supervisor = op.Supervisor.Codigo
+                });
+            }
+            return ops;
+        }
+
+        public bool AptoCargarHermanado(int numero)
+        {
+            return GestorListaOPSupCalidad.AptoCargarHermanado(numero);
+        }
     }
 }

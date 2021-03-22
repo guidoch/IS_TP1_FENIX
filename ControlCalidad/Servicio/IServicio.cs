@@ -32,5 +32,11 @@ namespace Servicio
         List<LineaTrabajoDTO> GetLineasLibres();
         [OperationContract]
         bool ControlarOPsTodasFinalizadas(int empleado);
+        [OperationContract]
+        bool IniciarOP(int numero, int linea, int modelo, int color, int empleado);
+        [OperationContract]
+        List<OPDTO> ListaOPs();
+        [OperationContract]
+        bool AptoCargarHermanado(int numero);
     }
 }

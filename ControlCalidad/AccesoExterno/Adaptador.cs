@@ -67,7 +67,10 @@ namespace AccesoExterno
 
         public static bool IniciarOP(int numero, int linea, int modelo, int color, int empleado)
         {
-            throw new NotImplementedException(); ///<<<<<<
+            using (var servicio = new ReferenciaServicio.ServicioClient())
+            {
+                return servicio.IniciarOP(numero, linea, modelo, color, empleado);
+            }
         }
 
         public static ColorDTO[] GetColores()
@@ -93,5 +96,27 @@ namespace AccesoExterno
                 return servicio.GetModelos();
             }
         }
+
+        public static int AsociarOP(int numero, int empleado)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static bool AptoCargarHermanado(int numero)
+        {
+            using (var servicio = new ReferenciaServicio.ServicioClient())
+            {
+                return servicio.AptoCargarHermanado(numero);
+            }
+        }
+
+        public static OPDTO[] ListarOPs()
+        {
+            using (var servicio = new ReferenciaServicio.ServicioClient())
+            {
+                return servicio.ListaOPs();
+            }
+        }
+
     }
 }

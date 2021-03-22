@@ -67,6 +67,24 @@
   <wsdl:message name="IServicio_ControlarOPsTodasFinalizadas_OutputMessage">
     <wsdl:part name="parameters" element="tns:ControlarOPsTodasFinalizadasResponse" />
   </wsdl:message>
+  <wsdl:message name="IServicio_IniciarOP_InputMessage">
+    <wsdl:part name="parameters" element="tns:IniciarOP" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_IniciarOP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IniciarOPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_ListaOPs_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListaOPs" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_ListaOPs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListaOPsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_AptoCargarHermanado_InputMessage">
+    <wsdl:part name="parameters" element="tns:AptoCargarHermanado" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_AptoCargarHermanado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AptoCargarHermanadoResponse" />
+  </wsdl:message>
   <wsdl:portType name="IServicio">
     <wsdl:operation name="Autenticar">
       <wsdl:input wsaw:Action="http://tempuri.org/IServicio/Autenticar" message="tns:IServicio_Autenticar_InputMessage" />
@@ -107,6 +125,18 @@
     <wsdl:operation name="ControlarOPsTodasFinalizadas">
       <wsdl:input wsaw:Action="http://tempuri.org/IServicio/ControlarOPsTodasFinalizadas" message="tns:IServicio_ControlarOPsTodasFinalizadas_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServicio/ControlarOPsTodasFinalizadasResponse" message="tns:IServicio_ControlarOPsTodasFinalizadas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IniciarOP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicio/IniciarOP" message="tns:IServicio_IniciarOP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicio/IniciarOPResponse" message="tns:IServicio_IniciarOP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaOPs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicio/ListaOPs" message="tns:IServicio_ListaOPs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicio/ListaOPsResponse" message="tns:IServicio_ListaOPs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AptoCargarHermanado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicio/AptoCargarHermanado" message="tns:IServicio_AptoCargarHermanado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicio/AptoCargarHermanadoResponse" message="tns:IServicio_AptoCargarHermanado_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IServicio" type="tns:IServicio">
@@ -194,6 +224,33 @@
     </wsdl:operation>
     <wsdl:operation name="ControlarOPsTodasFinalizadas">
       <soap:operation soapAction="http://tempuri.org/IServicio/ControlarOPsTodasFinalizadas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IniciarOP">
+      <soap:operation soapAction="http://tempuri.org/IServicio/IniciarOP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaOPs">
+      <soap:operation soapAction="http://tempuri.org/IServicio/ListaOPs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AptoCargarHermanado">
+      <soap:operation soapAction="http://tempuri.org/IServicio/AptoCargarHermanado" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

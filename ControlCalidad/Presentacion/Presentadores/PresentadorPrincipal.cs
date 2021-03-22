@@ -35,7 +35,7 @@ namespace Presentacion.Presentadores
         {
             if ((_vista.Child == null || _vista.Child.Visible != true) && (_login.Cargo == "SUP_CALIDAD"))
             {
-                //_vista.Child = new VistaListaOPSupCalidad(_login);
+                _vista.Child = new VistaListaOPSupCalidad(_login);
                 _vista.Child.MdiParent = this._vista;
                 _vista.Child.Show();
             }

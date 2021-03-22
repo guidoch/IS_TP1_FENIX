@@ -136,4 +136,48 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="IniciarOP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="numero" type="xs:int" />
+        <xs:element minOccurs="0" name="linea" type="xs:int" />
+        <xs:element minOccurs="0" name="modelo" type="xs:int" />
+        <xs:element minOccurs="0" name="color" type="xs:int" />
+        <xs:element minOccurs="0" name="empleado" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IniciarOPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IniciarOPResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListaOPs">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListaOPsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Servicio.Entidades" minOccurs="0" name="ListaOPsResult" nillable="true" type="q6:ArrayOfOPDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AptoCargarHermanado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="numero" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AptoCargarHermanadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AptoCargarHermanadoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

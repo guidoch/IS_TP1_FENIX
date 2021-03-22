@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Presentadores\PresentadorAutenticar.cs" />
     <Compile Include="Presentadores\PresentadorIniciarOP.cs" />
+    <Compile Include="Presentadores\PresentadorListaOPSupCalidad.cs" />
     <Compile Include="Presentadores\PresentadorListaOpSupLinea.cs" />
     <Compile Include="Presentadores\PresentadorPrincipal.cs" />
     <Compile Include="Program.cs" />
@@ -69,6 +70,12 @@
     </Compile>
     <Compile Include="Vistas\VistaListaOP.designer.cs">
       <DependentUpon>VistaListaOP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\VistaListaOPSupCalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\VistaListaOPSupCalidad.designer.cs">
+      <DependentUpon>VistaListaOPSupCalidad.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\VistaPrincipal.cs">
       <SubType>Form</SubType>
@@ -94,10 +101,14 @@
     <EmbeddedResource Include="Vistas\VistaListaOP.resx">
       <DependentUpon>VistaListaOP.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\VistaListaOPSupCalidad.resx">
+      <DependentUpon>VistaListaOPSupCalidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\VistaPrincipal.resx">
       <DependentUpon>VistaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\AccesoExterno.ReferenciaServicio.AutenticarDTO.datasource" />
+    <None Include="Properties\DataSources\AccesoExterno.ReferenciaServicio.OPDTO.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

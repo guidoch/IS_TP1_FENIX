@@ -25,6 +25,28 @@ namespace Aplicacion
             return RepositorioOP.Instancia.ListarLineasLibres();
         }
 
+        public static bool IniciarOP(int numero, int linea, int modelo, int color, int supervisor)
+        {
+            if (RepositorioOP.Instancia.VerificarLineaLibre(linea)) // REPRESENTAR EN EL MODELO??? creeemos que ya no hace falta
+            {
+                if (RepositorioOP.Instancia.GuardarSeguro(new OP(
+                numero,
+                RepositorioEmpleados.Instancia.BuscarCodigo(supervisor),
+                RepositorioModelos.Instancia.BuscarCodigo(modelo),
+                RepositorioColores.Instancia.BuscarCodigo(color),
+                RepositorioLineasDeTrabajo.Instancia.BuscarCodigo(linea)
+                )))
+                {
+                    return true; //MessageBox.Show("OP creada", "Aviso");
+                }
+                else return false; //MessageBox.Show("Linea ocupada", "Aviso");
+            }
+            else
+            {
+                return false; //MessageBox.Show("Linea ocupada", "Aviso");
+            }
+        }
+
         /*//private PresentadorIniciarOP _presentador;
         public Empleado Supervisor { get; set; }
 

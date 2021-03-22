@@ -541,6 +541,24 @@ namespace AccesoExterno.ReferenciaServicio {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicio/ControlarOPsTodasFinalizadas", ReplyAction="http://tempuri.org/IServicio/ControlarOPsTodasFinalizadasResponse")]
         System.Threading.Tasks.Task<bool> ControlarOPsTodasFinalizadasAsync(int empleado);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicio/IniciarOP", ReplyAction="http://tempuri.org/IServicio/IniciarOPResponse")]
+        bool IniciarOP(int numero, int linea, int modelo, int color, int empleado);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicio/IniciarOP", ReplyAction="http://tempuri.org/IServicio/IniciarOPResponse")]
+        System.Threading.Tasks.Task<bool> IniciarOPAsync(int numero, int linea, int modelo, int color, int empleado);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicio/ListaOPs", ReplyAction="http://tempuri.org/IServicio/ListaOPsResponse")]
+        AccesoExterno.ReferenciaServicio.OPDTO[] ListaOPs();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicio/ListaOPs", ReplyAction="http://tempuri.org/IServicio/ListaOPsResponse")]
+        System.Threading.Tasks.Task<AccesoExterno.ReferenciaServicio.OPDTO[]> ListaOPsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicio/AptoCargarHermanado", ReplyAction="http://tempuri.org/IServicio/AptoCargarHermanadoResponse")]
+        bool AptoCargarHermanado(int numero);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicio/AptoCargarHermanado", ReplyAction="http://tempuri.org/IServicio/AptoCargarHermanadoResponse")]
+        System.Threading.Tasks.Task<bool> AptoCargarHermanadoAsync(int numero);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -648,6 +666,30 @@ namespace AccesoExterno.ReferenciaServicio {
         
         public System.Threading.Tasks.Task<bool> ControlarOPsTodasFinalizadasAsync(int empleado) {
             return base.Channel.ControlarOPsTodasFinalizadasAsync(empleado);
+        }
+        
+        public bool IniciarOP(int numero, int linea, int modelo, int color, int empleado) {
+            return base.Channel.IniciarOP(numero, linea, modelo, color, empleado);
+        }
+        
+        public System.Threading.Tasks.Task<bool> IniciarOPAsync(int numero, int linea, int modelo, int color, int empleado) {
+            return base.Channel.IniciarOPAsync(numero, linea, modelo, color, empleado);
+        }
+        
+        public AccesoExterno.ReferenciaServicio.OPDTO[] ListaOPs() {
+            return base.Channel.ListaOPs();
+        }
+        
+        public System.Threading.Tasks.Task<AccesoExterno.ReferenciaServicio.OPDTO[]> ListaOPsAsync() {
+            return base.Channel.ListaOPsAsync();
+        }
+        
+        public bool AptoCargarHermanado(int numero) {
+            return base.Channel.AptoCargarHermanado(numero);
+        }
+        
+        public System.Threading.Tasks.Task<bool> AptoCargarHermanadoAsync(int numero) {
+            return base.Channel.AptoCargarHermanadoAsync(numero);
         }
     }
 }

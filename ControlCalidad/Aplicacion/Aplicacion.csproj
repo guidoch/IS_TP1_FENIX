@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="GestorAutenticar.cs" />
     <Compile Include="GestorIniciarOP.cs" />
+    <Compile Include="GestorListaOPSupCalidad.cs" />
     <Compile Include="GestorListaOPSupLinea.cs" />
     <Compile Include="GestorPrincipal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
