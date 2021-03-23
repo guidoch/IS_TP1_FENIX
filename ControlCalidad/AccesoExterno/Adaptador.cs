@@ -1,6 +1,7 @@
 ﻿using AccesoExterno.ReferenciaServicio;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -158,6 +159,31 @@ namespace AccesoExterno
             using (var servicio = new ReferenciaServicio.ServicioClient())
             {
                 return servicio.DesasociarOP(numeroOP);
+            }
+        }
+
+        public static int CalcularObjetivo(int numeroOP)
+        {
+            using (var servicio = new ReferenciaServicio.ServicioClient())
+            {
+                return servicio.CalcularObjetivo(numeroOP);
+            }
+        }
+
+        public static int ContarPrimeraEnTurno(int numeroOP)
+        {
+            using (var servicio = new ReferenciaServicio.ServicioClient())
+            {
+                return servicio.ContarPrimeraEnTurno(numeroOP);
+            }
+        }
+
+        public static DataTable TopDefectos(int numeroOP)
+        {
+            using (var servicio = new ReferenciaServicio.ServicioClient())
+            {
+                //return null;
+                return servicio.TopDefectos(numeroOP);
             }
         }
 

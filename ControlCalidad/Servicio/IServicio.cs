@@ -1,6 +1,7 @@
 ﻿using Servicio.Entidades;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -50,6 +51,12 @@ namespace Servicio
         int RegistrarInspeccion(int numeroOP, List<DefectoDTO> defectos);
         [OperationContract]
         bool DesasociarOP(int numeroOP);
+        [OperationContract]
+        int CalcularObjetivo(int numeroOP);
+        [OperationContract]
+        int ContarPrimeraEnTurno(int numeroOP);
+        [OperationContract] 
+        DataTable TopDefectos(int numeroOP);
 
 
         [OperationContract]

@@ -140,6 +140,7 @@ namespace Datos
             }
             return primera;
         }
+
         public DataTable TopDefectos(OP op)
         {
             DataTable dt = new DataTable();
@@ -174,7 +175,7 @@ namespace Datos
                     }
                 }
             }
-
+            dt.TableName = "topDefectos";
             return dt;
         }
         public void Actualizar(OP op)

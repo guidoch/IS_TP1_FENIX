@@ -48,6 +48,7 @@
     <Compile Include="GestorListaOPSupLinea.cs" />
     <Compile Include="GestorPrincipal.cs" />
     <Compile Include="GestorRegistrarInspeccion.cs" />
+    <Compile Include="GestorVisualizarInformacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

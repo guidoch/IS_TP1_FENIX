@@ -52,9 +52,8 @@ namespace Presentacion.Presentadores
 
         internal void VisualizarOP()
         {
-            var numOP = (_bindingOPs.Current as OPDTO).Numero;
-            ////new VistaVisualizarInformacion(numOP).Show();
-            throw new NotImplementedException();
+            var op = (_bindingOPs.Current as OPDTO);
+            new VistaVisualizarInformacion(op, _login).Show();
         }
 
         internal void FinalizarOP()

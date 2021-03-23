@@ -859,6 +859,24 @@ namespace AccesoExterno.ReferenciaServicio {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicio/DesasociarOP", ReplyAction="http://tempuri.org/IServicio/DesasociarOPResponse")]
         System.Threading.Tasks.Task<bool> DesasociarOPAsync(int numeroOP);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicio/CalcularObjetivo", ReplyAction="http://tempuri.org/IServicio/CalcularObjetivoResponse")]
+        int CalcularObjetivo(int numeroOP);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicio/CalcularObjetivo", ReplyAction="http://tempuri.org/IServicio/CalcularObjetivoResponse")]
+        System.Threading.Tasks.Task<int> CalcularObjetivoAsync(int numeroOP);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicio/ContarPrimeraEnTurno", ReplyAction="http://tempuri.org/IServicio/ContarPrimeraEnTurnoResponse")]
+        int ContarPrimeraEnTurno(int numeroOP);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicio/ContarPrimeraEnTurno", ReplyAction="http://tempuri.org/IServicio/ContarPrimeraEnTurnoResponse")]
+        System.Threading.Tasks.Task<int> ContarPrimeraEnTurnoAsync(int numeroOP);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicio/TopDefectos", ReplyAction="http://tempuri.org/IServicio/TopDefectosResponse")]
+        System.Data.DataTable TopDefectos(int numeroOP);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicio/TopDefectos", ReplyAction="http://tempuri.org/IServicio/TopDefectosResponse")]
+        System.Threading.Tasks.Task<System.Data.DataTable> TopDefectosAsync(int numeroOP);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicio/GetInspeccion", ReplyAction="http://tempuri.org/IServicio/GetInspeccionResponse")]
         AccesoExterno.ReferenciaServicio.InspeccionDTO GetInspeccion(int codigo);
         
@@ -1049,6 +1067,30 @@ namespace AccesoExterno.ReferenciaServicio {
         
         public System.Threading.Tasks.Task<bool> DesasociarOPAsync(int numeroOP) {
             return base.Channel.DesasociarOPAsync(numeroOP);
+        }
+        
+        public int CalcularObjetivo(int numeroOP) {
+            return base.Channel.CalcularObjetivo(numeroOP);
+        }
+        
+        public System.Threading.Tasks.Task<int> CalcularObjetivoAsync(int numeroOP) {
+            return base.Channel.CalcularObjetivoAsync(numeroOP);
+        }
+        
+        public int ContarPrimeraEnTurno(int numeroOP) {
+            return base.Channel.ContarPrimeraEnTurno(numeroOP);
+        }
+        
+        public System.Threading.Tasks.Task<int> ContarPrimeraEnTurnoAsync(int numeroOP) {
+            return base.Channel.ContarPrimeraEnTurnoAsync(numeroOP);
+        }
+        
+        public System.Data.DataTable TopDefectos(int numeroOP) {
+            return base.Channel.TopDefectos(numeroOP);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataTable> TopDefectosAsync(int numeroOP) {
+            return base.Channel.TopDefectosAsync(numeroOP);
         }
         
         public AccesoExterno.ReferenciaServicio.InspeccionDTO GetInspeccion(int codigo) {

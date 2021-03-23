@@ -3,6 +3,7 @@ using Dominio;
 using Servicio.Entidades;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -238,6 +239,24 @@ namespace Servicio
             return GestorRegistrarInspeccion.DesasociarOP(numeroOP);
         }
 
+        public int CalcularObjetivo(int numeroOP)
+        {
+            return GestorVisualizarInformacion.CalcularObjetivo(numeroOP);
+        }
+
+        public int ContarPrimeraEnTurno(int numeroOP)
+        {
+            return GestorVisualizarInformacion.ContarPrimeraEnTurno(numeroOP);
+        }
+
+        public DataTable TopDefectos(int numeroOP)
+        {
+            return GestorVisualizarInformacion.TopDefectos(numeroOP);
+        }
+
+
+
+
 
 
         public InspeccionDTO GetInspeccion(int codigo)
@@ -249,5 +268,6 @@ namespace Servicio
         {
             throw new NotImplementedException();
         }
+        
     }
 }

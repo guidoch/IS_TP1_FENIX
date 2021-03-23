@@ -5,6 +5,7 @@
       <xsd:import namespace="http://tempuri.org/" />
       <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import namespace="http://schemas.datacontract.org/2004/07/Servicio.Entidades" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.Data" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IServicio_Autenticar_InputMessage">
@@ -121,6 +122,24 @@
   <wsdl:message name="IServicio_DesasociarOP_OutputMessage">
     <wsdl:part name="parameters" element="tns:DesasociarOPResponse" />
   </wsdl:message>
+  <wsdl:message name="IServicio_CalcularObjetivo_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalcularObjetivo" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_CalcularObjetivo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalcularObjetivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_ContarPrimeraEnTurno_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContarPrimeraEnTurno" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_ContarPrimeraEnTurno_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContarPrimeraEnTurnoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_TopDefectos_InputMessage">
+    <wsdl:part name="parameters" element="tns:TopDefectos" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_TopDefectos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TopDefectosResponse" />
+  </wsdl:message>
   <wsdl:message name="IServicio_GetInspeccion_InputMessage">
     <wsdl:part name="parameters" element="tns:GetInspeccion" />
   </wsdl:message>
@@ -209,6 +228,18 @@
     <wsdl:operation name="DesasociarOP">
       <wsdl:input wsaw:Action="http://tempuri.org/IServicio/DesasociarOP" message="tns:IServicio_DesasociarOP_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServicio/DesasociarOPResponse" message="tns:IServicio_DesasociarOP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalcularObjetivo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicio/CalcularObjetivo" message="tns:IServicio_CalcularObjetivo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicio/CalcularObjetivoResponse" message="tns:IServicio_CalcularObjetivo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContarPrimeraEnTurno">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicio/ContarPrimeraEnTurno" message="tns:IServicio_ContarPrimeraEnTurno_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicio/ContarPrimeraEnTurnoResponse" message="tns:IServicio_ContarPrimeraEnTurno_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TopDefectos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicio/TopDefectos" message="tns:IServicio_TopDefectos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicio/TopDefectosResponse" message="tns:IServicio_TopDefectos_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetInspeccion">
       <wsdl:input wsaw:Action="http://tempuri.org/IServicio/GetInspeccion" message="tns:IServicio_GetInspeccion_InputMessage" />
@@ -385,6 +416,33 @@
     </wsdl:operation>
     <wsdl:operation name="DesasociarOP">
       <soap:operation soapAction="http://tempuri.org/IServicio/DesasociarOP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcularObjetivo">
+      <soap:operation soapAction="http://tempuri.org/IServicio/CalcularObjetivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContarPrimeraEnTurno">
+      <soap:operation soapAction="http://tempuri.org/IServicio/ContarPrimeraEnTurno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TopDefectos">
+      <soap:operation soapAction="http://tempuri.org/IServicio/TopDefectos" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
