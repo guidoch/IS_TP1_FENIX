@@ -56,5 +56,10 @@ namespace Presentacion.Vistas
             _presentador.VisualizarOP();
             //MessageBox.Show("No implementado aun :)", "Disculpas");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            _presentador.Actualizar();
+        }
     }
 }

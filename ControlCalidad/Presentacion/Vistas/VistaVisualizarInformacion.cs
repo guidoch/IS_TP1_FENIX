@@ -48,5 +48,10 @@ namespace Presentacion.Vistas
         {
             _presentador.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            _presentador.Actualizar();
+        }
     }
 }

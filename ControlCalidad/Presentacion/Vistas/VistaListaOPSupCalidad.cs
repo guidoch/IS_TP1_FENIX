@@ -43,14 +43,14 @@ namespace Presentacion.Vistas
             _presentador.Desasociar();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            _presentador.Actualizar();
-        }
-
         private void btnHermanar_Click(object sender, EventArgs e)
         {
             _presentador.CargarHermanado();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            _presentador.Actualizar();
         }
     }
 }

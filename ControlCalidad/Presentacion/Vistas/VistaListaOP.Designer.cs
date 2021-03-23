@@ -32,12 +32,6 @@ namespace Presentacion.Vistas
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_iniaciar = new System.Windows.Forms.Button();
-            this.btn_pausar = new System.Windows.Forms.Button();
-            this.btn_finalizar = new System.Windows.Forms.Button();
-            this.btn_vizualizar = new System.Windows.Forms.Button();
-            this.btn_reanudar = new System.Windows.Forms.Button();
             this.numeroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modeloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,7 +40,14 @@ namespace Presentacion.Vistas
             this.lineaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.supervisorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.oPBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.empleadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btn_iniaciar = new System.Windows.Forms.Button();
+            this.btn_pausar = new System.Windows.Forms.Button();
+            this.btn_finalizar = new System.Windows.Forms.Button();
+            this.btn_vizualizar = new System.Windows.Forms.Button();
+            this.btn_reanudar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oPBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).BeginInit();
@@ -70,6 +71,52 @@ namespace Presentacion.Vistas
             this.dataGridView1.Size = new System.Drawing.Size(744, 654);
             this.dataGridView1.TabIndex = 0;
             // 
+            // numeroDataGridViewTextBoxColumn
+            // 
+            this.numeroDataGridViewTextBoxColumn.DataPropertyName = "Numero";
+            this.numeroDataGridViewTextBoxColumn.HeaderText = "Numero";
+            this.numeroDataGridViewTextBoxColumn.Name = "numeroDataGridViewTextBoxColumn";
+            // 
+            // modeloDataGridViewTextBoxColumn
+            // 
+            this.modeloDataGridViewTextBoxColumn.DataPropertyName = "Modelo";
+            this.modeloDataGridViewTextBoxColumn.HeaderText = "Modelo";
+            this.modeloDataGridViewTextBoxColumn.Name = "modeloDataGridViewTextBoxColumn";
+            // 
+            // colorDataGridViewTextBoxColumn
+            // 
+            this.colorDataGridViewTextBoxColumn.DataPropertyName = "Color";
+            this.colorDataGridViewTextBoxColumn.HeaderText = "Color";
+            this.colorDataGridViewTextBoxColumn.Name = "colorDataGridViewTextBoxColumn";
+            // 
+            // hermanadoDataGridViewTextBoxColumn
+            // 
+            this.hermanadoDataGridViewTextBoxColumn.DataPropertyName = "Hermanado";
+            this.hermanadoDataGridViewTextBoxColumn.HeaderText = "Hermanado";
+            this.hermanadoDataGridViewTextBoxColumn.Name = "hermanadoDataGridViewTextBoxColumn";
+            // 
+            // estadoDataGridViewTextBoxColumn
+            // 
+            this.estadoDataGridViewTextBoxColumn.DataPropertyName = "Estado";
+            this.estadoDataGridViewTextBoxColumn.HeaderText = "Estado";
+            this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
+            // 
+            // lineaDataGridViewTextBoxColumn
+            // 
+            this.lineaDataGridViewTextBoxColumn.DataPropertyName = "Linea";
+            this.lineaDataGridViewTextBoxColumn.HeaderText = "Linea";
+            this.lineaDataGridViewTextBoxColumn.Name = "lineaDataGridViewTextBoxColumn";
+            // 
+            // supervisorDataGridViewTextBoxColumn
+            // 
+            this.supervisorDataGridViewTextBoxColumn.DataPropertyName = "Supervisor";
+            this.supervisorDataGridViewTextBoxColumn.HeaderText = "Supervisor";
+            this.supervisorDataGridViewTextBoxColumn.Name = "supervisorDataGridViewTextBoxColumn";
+            // 
+            // oPBindingSource
+            // 
+            this.oPBindingSource.DataSource = typeof(AccesoExterno.ReferenciaServicio.OPDTO);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -79,6 +126,10 @@ namespace Presentacion.Vistas
             this.label1.Size = new System.Drawing.Size(86, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Supervisor Linea";
+            // 
+            // empleadoBindingSource
+            // 
+            this.empleadoBindingSource.DataSource = typeof(AccesoExterno.ReferenciaServicio.AutenticarDTO);
             // 
             // btn_iniaciar
             // 
@@ -130,55 +181,15 @@ namespace Presentacion.Vistas
             this.btn_reanudar.UseVisualStyleBackColor = true;
             this.btn_reanudar.Click += new System.EventHandler(this.btn_reanudar_Click);
             // 
-            // numeroDataGridViewTextBoxColumn
+            // button1
             // 
-            this.numeroDataGridViewTextBoxColumn.DataPropertyName = "Numero";
-            this.numeroDataGridViewTextBoxColumn.HeaderText = "Numero";
-            this.numeroDataGridViewTextBoxColumn.Name = "numeroDataGridViewTextBoxColumn";
-            // 
-            // modeloDataGridViewTextBoxColumn
-            // 
-            this.modeloDataGridViewTextBoxColumn.DataPropertyName = "Modelo";
-            this.modeloDataGridViewTextBoxColumn.HeaderText = "Modelo";
-            this.modeloDataGridViewTextBoxColumn.Name = "modeloDataGridViewTextBoxColumn";
-            // 
-            // colorDataGridViewTextBoxColumn
-            // 
-            this.colorDataGridViewTextBoxColumn.DataPropertyName = "Color";
-            this.colorDataGridViewTextBoxColumn.HeaderText = "Color";
-            this.colorDataGridViewTextBoxColumn.Name = "colorDataGridViewTextBoxColumn";
-            // 
-            // hermanadoDataGridViewTextBoxColumn
-            // 
-            this.hermanadoDataGridViewTextBoxColumn.DataPropertyName = "Hermanado";
-            this.hermanadoDataGridViewTextBoxColumn.HeaderText = "Hermanado";
-            this.hermanadoDataGridViewTextBoxColumn.Name = "hermanadoDataGridViewTextBoxColumn";
-            // 
-            // estadoDataGridViewTextBoxColumn
-            // 
-            this.estadoDataGridViewTextBoxColumn.DataPropertyName = "Estado";
-            this.estadoDataGridViewTextBoxColumn.HeaderText = "Estado";
-            this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
-            // 
-            // lineaDataGridViewTextBoxColumn
-            // 
-            this.lineaDataGridViewTextBoxColumn.DataPropertyName = "Linea";
-            this.lineaDataGridViewTextBoxColumn.HeaderText = "Linea";
-            this.lineaDataGridViewTextBoxColumn.Name = "lineaDataGridViewTextBoxColumn";
-            // 
-            // supervisorDataGridViewTextBoxColumn
-            // 
-            this.supervisorDataGridViewTextBoxColumn.DataPropertyName = "Supervisor";
-            this.supervisorDataGridViewTextBoxColumn.HeaderText = "Supervisor";
-            this.supervisorDataGridViewTextBoxColumn.Name = "supervisorDataGridViewTextBoxColumn";
-            // 
-            // oPBindingSource
-            // 
-            this.oPBindingSource.DataSource = typeof(AccesoExterno.ReferenciaServicio.OPDTO);
-            // 
-            // empleadoBindingSource
-            // 
-            this.empleadoBindingSource.DataSource = typeof(AccesoExterno.ReferenciaServicio.AutenticarDTO);
+            this.button1.Location = new System.Drawing.Point(778, 489);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(208, 46);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Actualizar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // VistaListaOP
             // 
@@ -186,6 +197,7 @@ namespace Presentacion.Vistas
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 729);
             this.ControlBox = false;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_reanudar);
             this.Controls.Add(this.btn_vizualizar);
             this.Controls.Add(this.btn_finalizar);
@@ -223,5 +235,6 @@ namespace Presentacion.Vistas
         private System.Windows.Forms.DataGridViewTextBoxColumn lineaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn supervisorDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource empleadoBindingSource;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -46,6 +46,7 @@ namespace Presentacion.Vistas
             this.lineaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.supervisorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.oPBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oPBindingSource)).BeginInit();
@@ -171,13 +172,24 @@ namespace Presentacion.Vistas
             // 
             // oPBindingSource
             // 
-            this.oPBindingSource.DataSource = typeof(OPDTO);
+            this.oPBindingSource.DataSource = typeof(AccesoExterno.ReferenciaServicio.OPDTO);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(621, 253);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(187, 153);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Actualizar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // VistaVisualizarInformacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridView1);
@@ -213,5 +225,6 @@ namespace Presentacion.Vistas
         private System.Windows.Forms.DataGridViewTextBoxColumn lineaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn supervisorDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource oPBindingSource;
+        private System.Windows.Forms.Button button1;
     }
 }
