@@ -180,4 +180,117 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetOP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="numero" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Servicio.Entidades" minOccurs="0" name="GetOPResult" nillable="true" type="q7:OPDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CargarHermanado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="hermanado" type="xs:int" />
+        <xs:element minOccurs="0" name="op" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CargarHermanadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CargarHermanadoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AsociarOP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="numero" type="xs:int" />
+        <xs:element minOccurs="0" name="supervisor" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AsociarOPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AsociarOPResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarTipoDefectos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarTipoDefectosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Servicio.Entidades" minOccurs="0" name="ListarTipoDefectosResult" nillable="true" type="q8:ArrayOfTipoDefectoDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarInspeccion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="numeroOP" type="xs:int" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Servicio.Entidades" minOccurs="0" name="defectos" nillable="true" type="q9:ArrayOfDefectoDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarInspeccionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RegistrarInspeccionResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DesasociarOP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="numeroOP" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DesasociarOPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DesasociarOPResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInspeccion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInspeccionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Servicio.Entidades" minOccurs="0" name="GetInspeccionResult" nillable="true" type="q10:InspeccionDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDefecto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDefectoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Servicio.Entidades" minOccurs="0" name="GetDefectoResult" nillable="true" type="q11:DefectoDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

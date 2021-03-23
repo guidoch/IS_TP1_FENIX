@@ -47,10 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Presentadores\PresentadorAutenticar.cs" />
+    <Compile Include="Presentadores\PresentadorCargarHermanado.cs" />
     <Compile Include="Presentadores\PresentadorIniciarOP.cs" />
     <Compile Include="Presentadores\PresentadorListaOPSupCalidad.cs" />
     <Compile Include="Presentadores\PresentadorListaOpSupLinea.cs" />
     <Compile Include="Presentadores\PresentadorPrincipal.cs" />
+    <Compile Include="Presentadores\PresentadorRegistrarInspeccion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vistas\VistaAutenticar.cs">
@@ -58,6 +60,12 @@
     </Compile>
     <Compile Include="Vistas\VistaAutenticar.designer.cs">
       <DependentUpon>VistaAutenticar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\VistaCargarHermanado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\VistaCargarHermanado.designer.cs">
+      <DependentUpon>VistaCargarHermanado.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\VistaIniciarOP.cs">
       <SubType>Form</SubType>
@@ -83,6 +91,12 @@
     <Compile Include="Vistas\VistaPrincipal.designer.cs">
       <DependentUpon>VistaPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\VistaRegistrarInspeccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\VistaRegistrarInspeccion.designer.cs">
+      <DependentUpon>VistaRegistrarInspeccion.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -95,6 +109,9 @@
     <EmbeddedResource Include="Vistas\VistaAutenticar.resx">
       <DependentUpon>VistaAutenticar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\VistaCargarHermanado.resx">
+      <DependentUpon>VistaCargarHermanado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\VistaIniciarOP.resx">
       <DependentUpon>VistaIniciarOP.cs</DependentUpon>
     </EmbeddedResource>
@@ -106,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\VistaPrincipal.resx">
       <DependentUpon>VistaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\VistaRegistrarInspeccion.resx">
+      <DependentUpon>VistaRegistrarInspeccion.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\AccesoExterno.ReferenciaServicio.AutenticarDTO.datasource" />
     <None Include="Properties\DataSources\AccesoExterno.ReferenciaServicio.OPDTO.datasource" />

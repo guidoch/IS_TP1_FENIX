@@ -85,6 +85,54 @@
   <wsdl:message name="IServicio_AptoCargarHermanado_OutputMessage">
     <wsdl:part name="parameters" element="tns:AptoCargarHermanadoResponse" />
   </wsdl:message>
+  <wsdl:message name="IServicio_GetOP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOP" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_GetOP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_CargarHermanado_InputMessage">
+    <wsdl:part name="parameters" element="tns:CargarHermanado" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_CargarHermanado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CargarHermanadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_AsociarOP_InputMessage">
+    <wsdl:part name="parameters" element="tns:AsociarOP" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_AsociarOP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AsociarOPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_ListarTipoDefectos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarTipoDefectos" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_ListarTipoDefectos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarTipoDefectosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_RegistrarInspeccion_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarInspeccion" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_RegistrarInspeccion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarInspeccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_DesasociarOP_InputMessage">
+    <wsdl:part name="parameters" element="tns:DesasociarOP" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_DesasociarOP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DesasociarOPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_GetInspeccion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInspeccion" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_GetInspeccion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInspeccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_GetDefecto_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDefecto" />
+  </wsdl:message>
+  <wsdl:message name="IServicio_GetDefecto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDefectoResponse" />
+  </wsdl:message>
   <wsdl:portType name="IServicio">
     <wsdl:operation name="Autenticar">
       <wsdl:input wsaw:Action="http://tempuri.org/IServicio/Autenticar" message="tns:IServicio_Autenticar_InputMessage" />
@@ -137,6 +185,38 @@
     <wsdl:operation name="AptoCargarHermanado">
       <wsdl:input wsaw:Action="http://tempuri.org/IServicio/AptoCargarHermanado" message="tns:IServicio_AptoCargarHermanado_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServicio/AptoCargarHermanadoResponse" message="tns:IServicio_AptoCargarHermanado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicio/GetOP" message="tns:IServicio_GetOP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicio/GetOPResponse" message="tns:IServicio_GetOP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CargarHermanado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicio/CargarHermanado" message="tns:IServicio_CargarHermanado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicio/CargarHermanadoResponse" message="tns:IServicio_CargarHermanado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AsociarOP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicio/AsociarOP" message="tns:IServicio_AsociarOP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicio/AsociarOPResponse" message="tns:IServicio_AsociarOP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarTipoDefectos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicio/ListarTipoDefectos" message="tns:IServicio_ListarTipoDefectos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicio/ListarTipoDefectosResponse" message="tns:IServicio_ListarTipoDefectos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarInspeccion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicio/RegistrarInspeccion" message="tns:IServicio_RegistrarInspeccion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicio/RegistrarInspeccionResponse" message="tns:IServicio_RegistrarInspeccion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DesasociarOP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicio/DesasociarOP" message="tns:IServicio_DesasociarOP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicio/DesasociarOPResponse" message="tns:IServicio_DesasociarOP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInspeccion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicio/GetInspeccion" message="tns:IServicio_GetInspeccion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicio/GetInspeccionResponse" message="tns:IServicio_GetInspeccion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDefecto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicio/GetDefecto" message="tns:IServicio_GetDefecto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicio/GetDefectoResponse" message="tns:IServicio_GetDefecto_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IServicio" type="tns:IServicio">
@@ -251,6 +331,78 @@
     </wsdl:operation>
     <wsdl:operation name="AptoCargarHermanado">
       <soap:operation soapAction="http://tempuri.org/IServicio/AptoCargarHermanado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOP">
+      <soap:operation soapAction="http://tempuri.org/IServicio/GetOP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarHermanado">
+      <soap:operation soapAction="http://tempuri.org/IServicio/CargarHermanado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AsociarOP">
+      <soap:operation soapAction="http://tempuri.org/IServicio/AsociarOP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarTipoDefectos">
+      <soap:operation soapAction="http://tempuri.org/IServicio/ListarTipoDefectos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarInspeccion">
+      <soap:operation soapAction="http://tempuri.org/IServicio/RegistrarInspeccion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DesasociarOP">
+      <soap:operation soapAction="http://tempuri.org/IServicio/DesasociarOP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInspeccion">
+      <soap:operation soapAction="http://tempuri.org/IServicio/GetInspeccion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDefecto">
+      <soap:operation soapAction="http://tempuri.org/IServicio/GetDefecto" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

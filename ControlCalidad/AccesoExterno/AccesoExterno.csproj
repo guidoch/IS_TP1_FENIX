@@ -62,6 +62,12 @@
     <None Include="Connected Services\ReferenciaServicio\AccesoExterno.ReferenciaServicio.ColorDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ReferenciaServicio\AccesoExterno.ReferenciaServicio.DefectoDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ReferenciaServicio\AccesoExterno.ReferenciaServicio.InspeccionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ReferenciaServicio\AccesoExterno.ReferenciaServicio.LineaTrabajoDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -69,6 +75,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ReferenciaServicio\AccesoExterno.ReferenciaServicio.OPDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ReferenciaServicio\AccesoExterno.ReferenciaServicio.TipoDefectoDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ReferenciaServicio\service.wsdl" />

@@ -99,7 +99,10 @@ namespace AccesoExterno
 
         public static int AsociarOP(int numero, int empleado)
         {
-            throw new NotImplementedException();
+            using (var servicio = new ReferenciaServicio.ServicioClient())
+            {
+                return servicio.AsociarOP(numero, empleado);
+            }
         }
 
         public static bool AptoCargarHermanado(int numero)
@@ -115,6 +118,46 @@ namespace AccesoExterno
             using (var servicio = new ReferenciaServicio.ServicioClient())
             {
                 return servicio.ListaOPs();
+            }
+        }
+
+        public static OPDTO GetOP(int numero)
+        {
+            using (var servicio = new ReferenciaServicio.ServicioClient())
+            {
+                return servicio.GetOP(numero);
+            }
+        }
+
+        public static bool CargarHermanado(int hermanado, int op)
+        {
+            using (var servicio = new ReferenciaServicio.ServicioClient())
+            {
+                return servicio.CargarHermanado(hermanado,op);
+            }
+        }
+
+        public static TipoDefectoDTO[] ListarTipoDefectos()
+        {
+            using (var servicio = new ReferenciaServicio.ServicioClient())
+            {
+                return servicio.ListarTipoDefectos();
+            }
+        }
+
+        public static int RegistrarInspeccion(int numeroOP, List<DefectoDTO> defectos)
+        {
+            using (var servicio = new ReferenciaServicio.ServicioClient())
+            {
+                return servicio.RegistrarInspeccion(numeroOP, defectos.ToArray());
+            }
+        }
+
+        public static bool DesasociarOP(int numeroOP)
+        {
+            using (var servicio = new ReferenciaServicio.ServicioClient())
+            {
+                return servicio.DesasociarOP(numeroOP);
             }
         }
 

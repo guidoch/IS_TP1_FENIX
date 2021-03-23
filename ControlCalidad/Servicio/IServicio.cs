@@ -38,5 +38,25 @@ namespace Servicio
         List<OPDTO> ListaOPs();
         [OperationContract]
         bool AptoCargarHermanado(int numero);
+        [OperationContract]
+        OPDTO GetOP(int numero);
+        [OperationContract]
+        bool CargarHermanado(int hermanado, int op);
+        [OperationContract]
+        int AsociarOP(int numero, int supervisor);
+        [OperationContract]
+        List<TipoDefectoDTO> ListarTipoDefectos();
+        [OperationContract]
+        int RegistrarInspeccion(int numeroOP, List<DefectoDTO> defectos);
+        [OperationContract]
+        bool DesasociarOP(int numeroOP);
+
+
+        [OperationContract]
+        InspeccionDTO GetInspeccion(int codigo);
+        [OperationContract]
+        DefectoDTO GetDefecto(int codigo);
+        
+
     }
 }

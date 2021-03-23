@@ -69,4 +69,42 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="LineaTrabajoDTO" nillable="true" type="tns:LineaTrabajoDTO" />
+  <xs:complexType name="ArrayOfTipoDefectoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TipoDefectoDTO" nillable="true" type="tns:TipoDefectoDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTipoDefectoDTO" nillable="true" type="tns:ArrayOfTipoDefectoDTO" />
+  <xs:complexType name="TipoDefectoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TipoDefectoDTO" nillable="true" type="tns:TipoDefectoDTO" />
+  <xs:complexType name="ArrayOfDefectoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DefectoDTO" nillable="true" type="tns:DefectoDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDefectoDTO" nillable="true" type="tns:ArrayOfDefectoDTO" />
+  <xs:complexType name="DefectoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="Pie" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoDefectoCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="TipoDefectoDescripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoDefectoTipo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DefectoDTO" nillable="true" type="tns:DefectoDTO" />
+  <xs:complexType name="InspeccionDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaYHora" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ListaDefectos" nillable="true" type="tns:ArrayOfDefectoDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InspeccionDTO" nillable="true" type="tns:InspeccionDTO" />
 </xs:schema>

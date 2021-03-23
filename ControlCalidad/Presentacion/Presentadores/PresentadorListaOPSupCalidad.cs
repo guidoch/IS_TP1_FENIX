@@ -40,6 +40,7 @@ namespace Presentacion.Presentadores
             {
                 case 0:
                     MessageBox.Show("Asociado a OP", "Aviso");
+                    new VistaRegistrarInspeccion(_bindingOP.Current as OPDTO, _login).Show();
                     break;
                 case 1:
                     MessageBox.Show("No se puede asociar a OP, supervisor ya asociado a otra op", "Aviso");
@@ -61,8 +62,8 @@ namespace Presentacion.Presentadores
         {
             if (Adaptador.AptoCargarHermanado((_bindingOP.Current as OPDTO).Numero))
             { 
-                new VistaCargarHermanado(numero).Show();
-                throw new NotImplementedException();
+                new VistaCargarHermanado((_bindingOP.Current as OPDTO).Numero).Show();
+                //Actualizar();
             }
             else
             {
@@ -71,11 +72,11 @@ namespace Presentacion.Presentadores
 
         }
 
-        public void IniciarVistaRegistrarInspeccion(int numero, int codSup)
+        /*public void IniciarVistaRegistrarInspeccion(int numero, int codSup)
         {
             ////new VistaRegistrarInspeccion(numero,codSup).Show();
             throw new NotImplementedException();
-        }
+        }*/
 
         /*public void IniciarVistaCargarHermanado(int numero)
         {

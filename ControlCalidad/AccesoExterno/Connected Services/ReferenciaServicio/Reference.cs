@@ -478,6 +478,269 @@ namespace AccesoExterno.ReferenciaServicio {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TipoDefectoDTO", Namespace="http://schemas.datacontract.org/2004/07/Servicio.Entidades")]
+    [System.SerializableAttribute()]
+    public partial class TipoDefectoDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CodigoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescripcionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TipoField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Codigo {
+            get {
+                return this.CodigoField;
+            }
+            set {
+                if ((this.CodigoField.Equals(value) != true)) {
+                    this.CodigoField = value;
+                    this.RaisePropertyChanged("Codigo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Descripcion {
+            get {
+                return this.DescripcionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
+                    this.DescripcionField = value;
+                    this.RaisePropertyChanged("Descripcion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Tipo {
+            get {
+                return this.TipoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TipoField, value) != true)) {
+                    this.TipoField = value;
+                    this.RaisePropertyChanged("Tipo");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DefectoDTO", Namespace="http://schemas.datacontract.org/2004/07/Servicio.Entidades")]
+    [System.SerializableAttribute()]
+    public partial class DefectoDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CodigoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PieField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TipoDefectoCodigoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TipoDefectoDescripcionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TipoDefectoTipoField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Codigo {
+            get {
+                return this.CodigoField;
+            }
+            set {
+                if ((this.CodigoField.Equals(value) != true)) {
+                    this.CodigoField = value;
+                    this.RaisePropertyChanged("Codigo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Pie {
+            get {
+                return this.PieField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PieField, value) != true)) {
+                    this.PieField = value;
+                    this.RaisePropertyChanged("Pie");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int TipoDefectoCodigo {
+            get {
+                return this.TipoDefectoCodigoField;
+            }
+            set {
+                if ((this.TipoDefectoCodigoField.Equals(value) != true)) {
+                    this.TipoDefectoCodigoField = value;
+                    this.RaisePropertyChanged("TipoDefectoCodigo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TipoDefectoDescripcion {
+            get {
+                return this.TipoDefectoDescripcionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TipoDefectoDescripcionField, value) != true)) {
+                    this.TipoDefectoDescripcionField = value;
+                    this.RaisePropertyChanged("TipoDefectoDescripcion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TipoDefectoTipo {
+            get {
+                return this.TipoDefectoTipoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TipoDefectoTipoField, value) != true)) {
+                    this.TipoDefectoTipoField = value;
+                    this.RaisePropertyChanged("TipoDefectoTipo");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="InspeccionDTO", Namespace="http://schemas.datacontract.org/2004/07/Servicio.Entidades")]
+    [System.SerializableAttribute()]
+    public partial class InspeccionDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CodigoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime FechaYHoraField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private AccesoExterno.ReferenciaServicio.DefectoDTO[] ListaDefectosField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Codigo {
+            get {
+                return this.CodigoField;
+            }
+            set {
+                if ((this.CodigoField.Equals(value) != true)) {
+                    this.CodigoField = value;
+                    this.RaisePropertyChanged("Codigo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime FechaYHora {
+            get {
+                return this.FechaYHoraField;
+            }
+            set {
+                if ((this.FechaYHoraField.Equals(value) != true)) {
+                    this.FechaYHoraField = value;
+                    this.RaisePropertyChanged("FechaYHora");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public AccesoExterno.ReferenciaServicio.DefectoDTO[] ListaDefectos {
+            get {
+                return this.ListaDefectosField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ListaDefectosField, value) != true)) {
+                    this.ListaDefectosField = value;
+                    this.RaisePropertyChanged("ListaDefectos");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ReferenciaServicio.IServicio")]
     public interface IServicio {
@@ -559,6 +822,54 @@ namespace AccesoExterno.ReferenciaServicio {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicio/AptoCargarHermanado", ReplyAction="http://tempuri.org/IServicio/AptoCargarHermanadoResponse")]
         System.Threading.Tasks.Task<bool> AptoCargarHermanadoAsync(int numero);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicio/GetOP", ReplyAction="http://tempuri.org/IServicio/GetOPResponse")]
+        AccesoExterno.ReferenciaServicio.OPDTO GetOP(int numero);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicio/GetOP", ReplyAction="http://tempuri.org/IServicio/GetOPResponse")]
+        System.Threading.Tasks.Task<AccesoExterno.ReferenciaServicio.OPDTO> GetOPAsync(int numero);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicio/CargarHermanado", ReplyAction="http://tempuri.org/IServicio/CargarHermanadoResponse")]
+        bool CargarHermanado(int hermanado, int op);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicio/CargarHermanado", ReplyAction="http://tempuri.org/IServicio/CargarHermanadoResponse")]
+        System.Threading.Tasks.Task<bool> CargarHermanadoAsync(int hermanado, int op);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicio/AsociarOP", ReplyAction="http://tempuri.org/IServicio/AsociarOPResponse")]
+        int AsociarOP(int numero, int supervisor);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicio/AsociarOP", ReplyAction="http://tempuri.org/IServicio/AsociarOPResponse")]
+        System.Threading.Tasks.Task<int> AsociarOPAsync(int numero, int supervisor);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicio/ListarTipoDefectos", ReplyAction="http://tempuri.org/IServicio/ListarTipoDefectosResponse")]
+        AccesoExterno.ReferenciaServicio.TipoDefectoDTO[] ListarTipoDefectos();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicio/ListarTipoDefectos", ReplyAction="http://tempuri.org/IServicio/ListarTipoDefectosResponse")]
+        System.Threading.Tasks.Task<AccesoExterno.ReferenciaServicio.TipoDefectoDTO[]> ListarTipoDefectosAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicio/RegistrarInspeccion", ReplyAction="http://tempuri.org/IServicio/RegistrarInspeccionResponse")]
+        int RegistrarInspeccion(int numeroOP, AccesoExterno.ReferenciaServicio.DefectoDTO[] defectos);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicio/RegistrarInspeccion", ReplyAction="http://tempuri.org/IServicio/RegistrarInspeccionResponse")]
+        System.Threading.Tasks.Task<int> RegistrarInspeccionAsync(int numeroOP, AccesoExterno.ReferenciaServicio.DefectoDTO[] defectos);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicio/DesasociarOP", ReplyAction="http://tempuri.org/IServicio/DesasociarOPResponse")]
+        bool DesasociarOP(int numeroOP);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicio/DesasociarOP", ReplyAction="http://tempuri.org/IServicio/DesasociarOPResponse")]
+        System.Threading.Tasks.Task<bool> DesasociarOPAsync(int numeroOP);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicio/GetInspeccion", ReplyAction="http://tempuri.org/IServicio/GetInspeccionResponse")]
+        AccesoExterno.ReferenciaServicio.InspeccionDTO GetInspeccion(int codigo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicio/GetInspeccion", ReplyAction="http://tempuri.org/IServicio/GetInspeccionResponse")]
+        System.Threading.Tasks.Task<AccesoExterno.ReferenciaServicio.InspeccionDTO> GetInspeccionAsync(int codigo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicio/GetDefecto", ReplyAction="http://tempuri.org/IServicio/GetDefectoResponse")]
+        AccesoExterno.ReferenciaServicio.DefectoDTO GetDefecto(int codigo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicio/GetDefecto", ReplyAction="http://tempuri.org/IServicio/GetDefectoResponse")]
+        System.Threading.Tasks.Task<AccesoExterno.ReferenciaServicio.DefectoDTO> GetDefectoAsync(int codigo);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -690,6 +1001,70 @@ namespace AccesoExterno.ReferenciaServicio {
         
         public System.Threading.Tasks.Task<bool> AptoCargarHermanadoAsync(int numero) {
             return base.Channel.AptoCargarHermanadoAsync(numero);
+        }
+        
+        public AccesoExterno.ReferenciaServicio.OPDTO GetOP(int numero) {
+            return base.Channel.GetOP(numero);
+        }
+        
+        public System.Threading.Tasks.Task<AccesoExterno.ReferenciaServicio.OPDTO> GetOPAsync(int numero) {
+            return base.Channel.GetOPAsync(numero);
+        }
+        
+        public bool CargarHermanado(int hermanado, int op) {
+            return base.Channel.CargarHermanado(hermanado, op);
+        }
+        
+        public System.Threading.Tasks.Task<bool> CargarHermanadoAsync(int hermanado, int op) {
+            return base.Channel.CargarHermanadoAsync(hermanado, op);
+        }
+        
+        public int AsociarOP(int numero, int supervisor) {
+            return base.Channel.AsociarOP(numero, supervisor);
+        }
+        
+        public System.Threading.Tasks.Task<int> AsociarOPAsync(int numero, int supervisor) {
+            return base.Channel.AsociarOPAsync(numero, supervisor);
+        }
+        
+        public AccesoExterno.ReferenciaServicio.TipoDefectoDTO[] ListarTipoDefectos() {
+            return base.Channel.ListarTipoDefectos();
+        }
+        
+        public System.Threading.Tasks.Task<AccesoExterno.ReferenciaServicio.TipoDefectoDTO[]> ListarTipoDefectosAsync() {
+            return base.Channel.ListarTipoDefectosAsync();
+        }
+        
+        public int RegistrarInspeccion(int numeroOP, AccesoExterno.ReferenciaServicio.DefectoDTO[] defectos) {
+            return base.Channel.RegistrarInspeccion(numeroOP, defectos);
+        }
+        
+        public System.Threading.Tasks.Task<int> RegistrarInspeccionAsync(int numeroOP, AccesoExterno.ReferenciaServicio.DefectoDTO[] defectos) {
+            return base.Channel.RegistrarInspeccionAsync(numeroOP, defectos);
+        }
+        
+        public bool DesasociarOP(int numeroOP) {
+            return base.Channel.DesasociarOP(numeroOP);
+        }
+        
+        public System.Threading.Tasks.Task<bool> DesasociarOPAsync(int numeroOP) {
+            return base.Channel.DesasociarOPAsync(numeroOP);
+        }
+        
+        public AccesoExterno.ReferenciaServicio.InspeccionDTO GetInspeccion(int codigo) {
+            return base.Channel.GetInspeccion(codigo);
+        }
+        
+        public System.Threading.Tasks.Task<AccesoExterno.ReferenciaServicio.InspeccionDTO> GetInspeccionAsync(int codigo) {
+            return base.Channel.GetInspeccionAsync(codigo);
+        }
+        
+        public AccesoExterno.ReferenciaServicio.DefectoDTO GetDefecto(int codigo) {
+            return base.Channel.GetDefecto(codigo);
+        }
+        
+        public System.Threading.Tasks.Task<AccesoExterno.ReferenciaServicio.DefectoDTO> GetDefectoAsync(int codigo) {
+            return base.Channel.GetDefectoAsync(codigo);
         }
     }
 }

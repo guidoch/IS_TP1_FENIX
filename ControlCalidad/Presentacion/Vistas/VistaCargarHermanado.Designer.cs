@@ -1,4 +1,6 @@
-﻿namespace ControlCalidadClientePresentacion.Vistas
+﻿using AccesoExterno.ReferenciaServicio;
+
+namespace Presentacion.Vistas
 {
     partial class VistaCargarHermanado
     {
@@ -58,7 +60,7 @@
             // 
             // oPBindingSource
             // 
-            this.oPBindingSource.DataSource = typeof(ControlCalidadClienteAccesoExterno.Entidades.OP);
+            this.oPBindingSource.DataSource = typeof(AccesoExterno.ReferenciaServicio.OPDTO);
             // 
             // tBoxCargar
             // 

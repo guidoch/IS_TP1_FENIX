@@ -167,5 +167,87 @@ namespace Servicio
         {
             return GestorListaOPSupCalidad.AptoCargarHermanado(numero);
         }
+
+        public OPDTO GetOP(int numero)
+        {
+            var op = GestorCargarHermanado.GetOP(numero);
+            return new OPDTO()
+            {
+                Numero = op.Numero,
+                Modelo = op.Modelo.SKU,
+                Color = op.Color.Codigo,
+                Hermanado = op.Hermanado,
+                Estado = op.Estado.ToString(),
+                Linea = op.Linea.Numero,
+                Supervisor = op.Supervisor.Codigo
+            };
+        }
+
+        public bool CargarHermanado(int hermanado, int op)
+        {
+            return GestorCargarHermanado.CargarHermanado(hermanado, op);
+        }
+
+        public int AsociarOP(int numero, int supervisor)
+        {
+            return GestorListaOPSupCalidad.AsociarOP(numero, supervisor);
+        }
+
+        public List<TipoDefectoDTO> ListarTipoDefectos()
+        {
+            var aux = GestorRegistrarInspeccion.ListarTiposDefectos();
+            var defectos = new List<TipoDefectoDTO>() { };
+            foreach (var def in aux)
+            {
+                defectos.Add(new TipoDefectoDTO()
+                {
+                    Codigo = def.Codigo,
+                    Descripcion = def.Descripcion,
+                    Tipo = def.Tipo.ToString()
+                });
+            }
+            return defectos;
+        }
+
+        public int RegistrarInspeccion(int numeroOP, List<DefectoDTO> defectos)
+        {
+            var aux = new List<Defecto>() { };
+            foreach (var d in defectos)
+            {
+                var def = new Defecto(){Codigo = d.Codigo};
+                switch (d.Pie)
+                {
+                    case "Izquierdo":
+                        def.Pie = Pie.IZQ;
+                        break;
+                    case "Derecho":
+                        def.Pie = Pie.DER;
+                        break;
+                    default:
+                        throw new NotImplementedException();
+                }
+                def.TipoDefecto = GestorRegistrarInspeccion.TipoDefecto(d.TipoDefectoCodigo);
+                aux.Add(def); 
+            }
+            
+            return GestorRegistrarInspeccion.RegistrarInspeccion(numeroOP, aux);
+        }
+
+        public bool DesasociarOP(int numeroOP)
+        {
+            return GestorRegistrarInspeccion.DesasociarOP(numeroOP);
+        }
+
+
+
+        public InspeccionDTO GetInspeccion(int codigo)
+        {
+            throw new NotImplementedException();
+        }
+
+        public DefectoDTO GetDefecto(int codigo)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

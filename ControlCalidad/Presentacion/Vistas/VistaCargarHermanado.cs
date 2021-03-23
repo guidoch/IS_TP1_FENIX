@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Presentacion.Presentadores;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,9 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ControlCalidadClientePresentacion.Presentadores;
 
-namespace ControlCalidadClientePresentacion.Vistas
+namespace Presentacion.Vistas
 {
     public partial class VistaCargarHermanado : Form
     {
@@ -17,7 +17,6 @@ namespace ControlCalidadClientePresentacion.Vistas
         public VistaCargarHermanado(int numero)
         {
             InitializeComponent();
-
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             //this.WindowState = FormWindowState.Maximized;
             this.ControlBox = false;
